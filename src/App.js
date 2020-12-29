@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
+import Home from './component/home'
+import Main from './component/main'
+import About from './component/about'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      current : "home"
+    }
+  }
+
+  changeView = (input) => {
+      this.setState({
+         current : input
+      })
+  }
+
+  render() {
+    
+
+    return(
+      <React.Fragment>
+        {this.state.current === "home"? <Home view={this.changeView} /> : (this.state.current === "about" ? <About view={this.changeView} /> : <Main view={this.changeView} current={this.state.current}/>)}
+      </React.Fragment>
+    )
+  }
 }
 
 export default App;
