@@ -183,7 +183,7 @@ body {
 .head .intro h1:nth-child(2) {
   margin: 0;
 }
-.head .intro p {
+.head .intro p{
   position: relative;
   font-family: "Open Sans", sans-serif;
   padding: 20px;
@@ -194,40 +194,48 @@ body {
   animation: slideIn 1.6s ease-out;
   border-left: 3px solid rgb(0, 162, 211);
 }
+.head .intro .typewriter {
+  box-sizing: border-box;
+  width: fit-content;
+}
+.head .intro .typewriter p {
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end) infinite
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% { width: 0 }
+  25%,75% { width: 100%}
+  100% { width: 0}
+}
 .head .intro button {
   position: relative;
   cursor: pointer;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   grid-row: 5;
-  color: black;
+  color: rgb(0, 162, 211);
   font-weight: 700;
   background-color: transparent;
   border: none;
   margin: 20px;
-  width: 120px;
-  margin-right: auto;
+  width: 150px;
   height: 48px;
-  transition: background-color 0.3s;
+  margin-right: auto;
+  border-radius: 500px;
+  border: 2px solid rgb(0, 162, 211);
+  transition: background-color 0.3s, color 0.3s;
   z-index: 10;
 }
-.head .intro button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -350%;
-  height: 100%;
-  width: 500%;
-  z-index: -1;
-  background-color: rgb(0, 162, 211);
-  transition: left 0.5s ease-out;
-}
+
 .head .intro button:hover {
   color: white;
-  transition: all 0.3s;
-}
-.head .intro button:hover::before {
-  left: -300%;
+  background-color: rgb(0, 162, 211);
   transition: all 0.3s;
 }
 .head .intro button:hover ~ p:nth-child(2):before {
@@ -282,15 +290,17 @@ body {
   justify-content: center;
   align-items: center;
   width: 25%;
-  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
   transition: width 0.5s ease-out;
 }
 .about > div:hover {
   width: 27%;
   transition: all 0.5s ease-out;
 }
-.about > div h1{
+.about > div h1 {
   font-size: 50px;
   writing-mode: vertical-rl;
   text-orientation: upright;
@@ -327,22 +337,22 @@ body {
   }
 }
 .about .intro {
-  background: url('images/intro.jpg') no-repeat center;
+  background: url("images/intro.jpg") no-repeat center;
   background-size: cover;
   z-index: 40;
 }
 .about .school {
-  background: url('images/school.jpg') no-repeat center;
+  background: url("images/school.jpg") no-repeat center;
   background-size: cover;
   z-index: 30;
 }
 .about .interest {
-  background: url('images/interest.jpg') no-repeat center;
+  background: url("images/interest.jpg") no-repeat center;
   background-size: cover;
   z-index: 20;
 }
 .about .obj {
-  background: url('images/obj.jpg') no-repeat center;
+  background: url("images/obj.jpg") no-repeat center;
   background-size: cover;
   z-index: 10;
 }
@@ -365,30 +375,6 @@ body {
   background-color: black;
   transition: all 0.3s ease-in-out;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .pg-menu {
   position: fixed;
@@ -763,20 +749,6 @@ body {
     max-width: 90vw;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .about {
     flex-direction: column;
   }
@@ -789,7 +761,7 @@ body {
     height: 27%;
     transition: all 0.3s ease-out;
   }
-  .about > div h1{
+  .about > div h1 {
     font-size: 50px;
     writing-mode: initial;
     text-orientation: initial;
@@ -801,8 +773,6 @@ body {
     width: 55px;
     padding-left: 2%;
   }
-
-
 }
 
 .click {

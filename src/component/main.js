@@ -8,7 +8,8 @@ class Main extends Component {
     constructor() {
         super()
         this.state = {
-          current : "projects"
+          current : "projects",
+          c: 0
         }
     }
     
@@ -19,11 +20,30 @@ class Main extends Component {
           $('html,body').animate({scrollTop: $(".contain-body").offset().top}, 100);
       }
 
+    textAnim = (e) => {
+        let text = ["A WEB DEVELOPER", "A PROGRAMMER", "A SOFTWARE DEVELOPER", "A FRONT END DEVELOPER"]
+        if(this.state.c === 3)
+            this.setState({
+                c : 0
+            })
+        else
+            this.setState((prev) => ({
+                c : prev.c + 1
+            }))
+        
+        $(".typewriter p").text(text[this.state.c])
+    }
+
     componentDidMount() {
-        if(this.props.current === "projects" || this.props.current === "contacts")
+        if(this.props.current === "projects" || this.props.current === "contacts") {
             this.setState({
                 current : this.props.current
-        })
+            })
+            if(this.props.current === "projects")
+                this.changeView("projects")
+            if(this.props.current === "contacts")
+                this.changeView("contacts")
+        }
     }
     
     componentDidUpdate() {
@@ -38,6 +58,7 @@ class Main extends Component {
     }
     
     render() {
+
         return (
             <React.Fragment>
                 <div className="head-bg"></div>
@@ -52,7 +73,7 @@ class Main extends Component {
                         <p>HI, I AM</p>
                         <h1>ABDULSALAM</h1>
                         <h1>ODETAYO</h1>
-                        <p>A FRONT END DEVELOPER</p>
+                        <div className="typewriter" onAnimationIteration={this.textAnim}><p>A FRONT END DEVELOPER</p></div>
                     </div>
                 </div>
                 <div className="contain-body">

@@ -14,7 +14,7 @@ class Home extends Component {
                 </div>
                 <div className="cur-sel"></div>
             </div>
-            <div className="author">CREATED BY: ABDULSALAM ODETAYO</div>
+            <div className="author">@ABDULSALAM_ODETAYO</div>
             </React.Fragment>
         )
     }

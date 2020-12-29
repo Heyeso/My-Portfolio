@@ -35,23 +35,3 @@ const About = (props) => {
 }
 
 export default About
-
-{/*
-<div className="abt-info">
-    <img className="charac" src="images/undraw_about_me_wa29.svg" alt="default" />
-    <div className="me">
-        <h1>ABOUT ME</h1>
-        <p>
-            "I, ABDULSALAM ODETAYO, am a recent graduate from <span>The Community College of Baltimore County</span> with an
-            Associates Of Science in Computer Science. I love <span>gaming</span>, <span>programming</span>, and <span>cooking</span>.
-            Before college, I did not have any prior knowledge of computer science, but I had my love for
-            creating and <span>developing</span>. Acquiring graphic designing skills helped me channel my <span>creativity</span>. Despite
-            obtaining knowledge in computer science, proficiency in Java programming language, and skills such
-            as problem-solving and critical thinking, I was still far from earning the title of Developer. This
-            made me invest my time in web development, and I can conclude that it was worth it. This website and
-            my projects are proof of my dedication to learning and skills acquired. Now, I feel confident in
-            calling myself a <span>developer</span>, and I am currently striving to apply my current knowledge and skills at
-            the <span>professional</span> level while acquiring more knowledge and skills."
-        </p>
-    </div>
-</div> */}
