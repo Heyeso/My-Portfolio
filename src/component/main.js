@@ -35,6 +35,7 @@ class Main extends Component {
     }
 
     componentDidMount() {
+        $(".contain-body .back").fadeOut(0)
         if(this.props.current === "projects" || this.props.current === "contacts") {
             this.setState({
                 current : this.props.current
@@ -82,13 +83,13 @@ class Main extends Component {
                 </div>
                 <div className="contain-body">
                     {this.state.current === "projects" ? <Projects /> : <Contact />}
+                    <a className="back" href="#top"><i className="fas fa-arrow-up"></i></a>
                 </div>
                 <div className="footer">
                     <a rel="noopener noreferrer" href="https://www.linkedin.com/in/abdulsalam-odetayo-87ba72202/" target="_blank">LINKEDIN</a> | 
                     <a rel="noopener noreferrer" href="https://www.instagram.com/heyeso_92/" target="_blank">INSTAGRAM</a> | 
                     <a rel="noopener noreferrer" href="https://github.com/Heyeso?tab=repositories" target="_blank">GITHUB</a>
                 </div>
-
             </React.Fragment>
         )
     }

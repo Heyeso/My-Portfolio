@@ -31,12 +31,14 @@ $(document).ready(function () {
                 "background-color": "black",
                 transition: "all 0.3s ease-in"
             })
+            $(".contain-body .back").fadeIn(500)
         }
         else {
             $(".pg-menu").css({
                 "background-color": "rgba(0,0,0,0)",
                 transition: "all 0.3s ease-in"
             })
+            $(".contain-body .back").fadeOut(500)
         }
 
         $('.opt').each( function(i){

@@ -61,7 +61,7 @@ class App extends Component {
       "top": "0",
       "left" : "0",
       "height" : "100%",
-      "z-index" : "10000",
+      zIndex : "10000",
     }
     return(
       <React.Fragment>

@@ -461,6 +461,34 @@ body {
   padding: 10vh 0;
   background: rgb(255, 255, 255);
 }
+.contain-body .back {
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 500px;
+  opacity: 0.7;
+  border: 1px solid black;
+  transition: color 0.5s, background-color 0.5s, opacity 0.5s;
+  z-index: 100;
+  
+}
+.contain-body .back:hover {
+  opacity: 1;
+  color: white;
+  background-color: black;
+  transition: all 0.5s;
+}
 .contain {
   box-sizing: border-box;
   width: 100%;
@@ -551,7 +579,7 @@ body {
   transition: color 0.5s, background-color 0.5s;
 }
 .contain .contain-grid .opt .info a {
-  padding: 1px 5px;
+  padding: 5px 10px;
   color: black;
   text-decoration: none;
   margin: 0;
@@ -754,6 +782,13 @@ body {
 
   /* Body */
   /* page 1 */
+  .contain-body .back {
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    bottom: 90px;
+  }
   .contain {
     padding: 1vw;
   }
@@ -772,6 +807,9 @@ body {
   .contain .contain-grid .opt .link div:nth-child(2) {
     height: 100%;
     font-size: 5vw;
+  }
+  .contain .contain-grid .opt .info a {
+    padding: 1px 5px;
   }
   /* page 2 */
   .contain form {

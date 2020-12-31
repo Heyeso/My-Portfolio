@@ -1,6 +1,7 @@
 
 const Projects = () => {
 
+    // projecst objects property
     let proj = [
         {
             img : "images/subWebsite/quickSearch_Logo.png",

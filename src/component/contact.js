@@ -49,7 +49,7 @@ class Contact extends Component {
               development using HTML, CSS and JavaScript.
             </p>
             <p>
-              <a className href="Resume.pdf" target="_blank">Click Here</a> for my Resumé
+              <a href="Resume.pdf" target="_blank">Click Here</a> for my Resumé
             </p>
           </div>
           <form action="mailto:adeodetayo92@gmail.com" method="post" encType="text/plain">
