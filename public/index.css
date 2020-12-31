@@ -531,24 +531,35 @@ body {
   height: fit-content;
   align-items: center;
   font-size: calc(10px + (13 - 10) * ((100vw - 300px) / (1600 - 300)));
+  font-family: "Quicksand", sans-serif;
 }
 .contain .contain-grid .opt .info div:nth-child(1) {
   height: fit-content;
-  font-family: "Quicksand", sans-serif;
 }
-.contain .contain-grid .opt .info div:nth-child(2) {
-  font-family: "PT Sans Caption", sans-serif;
-  padding: 1px 10px;
+.contain .contain-grid .opt .info .priv {
+  padding: 1px 5px;
+  color: red;
+  margin: 0;
   margin-left: auto;
-  height: fit-content;
-  font-family: "Patua One", cursive;
-  letter-spacing: 0.1vw;
+  border-radius: 500px;
+  font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+  transition: color 0.5s, background-color 0.5s;
 }
-.contain .contain-grid .opt.personal .info div:nth-child(2) {
-  border-bottom: 2px solid red;
+.contain .contain-grid .opt .info a {
+  padding: 1px 5px;
+  color: black;
+  text-decoration: none;
+  margin: 0;
+  margin-left: auto;
+  border-radius: 500px;
+  border: 1px solid black;
+  font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+  transition: color 0.5s, background-color 0.5s;
 }
-.contain .contain-grid .opt.pro .info div:nth-child(2) {
-  border-bottom: 2px solid rgb(35, 94, 255);
+.contain .contain-grid .opt .info a:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.5s;
 }
 .contain .contain-grid .opt:hover .info {
   background-color: white;
@@ -856,4 +867,3 @@ body {
     transform: scaleY(1);
   }
 }
-

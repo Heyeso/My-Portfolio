@@ -1,11 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "My-Portfolio",
+  "name": "PORTFOLIO | Abdulsalam Odetayo",
   "icons": [
     {
-      "src": "images/iconLogo.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "images/iconLogo64.png",
+      "sizes": "64x64",
+      "type": "image/png"
     },
     {
       "src": "images/iconLogo192.png",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#00AFEF",
   "background_color": "#ffffff"
 }
