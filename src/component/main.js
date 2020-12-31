@@ -48,11 +48,11 @@ class Main extends Component {
     
     componentDidUpdate() {
         if(this.state.current === "projects") {
-            $(".pg-1").css({color: "rgb(1, 225, 255)"})
+            $(".pg-1").css({color: "rgb(0, 162, 211)"})
             $(".pg-2").css({color: "white"})
         }
         else {
-            $(".pg-2").css({color: "rgb(1, 225, 255)"})
+            $(".pg-2").css({color: "rgb(0, 162, 211)"})
             $(".pg-1").css({color: "white"})
         }
     }
@@ -69,18 +69,23 @@ class Main extends Component {
                 <div className="head">
                     <img onClick={() => this.props.view("home")} className="logo" src="images/projectLogo.png" alt="logo" />
                     <div className="intro">
-                        <button onClick={() => this.props.view("about")}>ABOUT ME</button>
+                        <div className="link">
+                            <button onClick={() => this.props.view("about")}>ABOUT ME</button>
+                            <button><a className="resume" href="Resume.pdf" target="_blank">Resumé</a></button>
+                        </div>
                         <p>HI, I AM</p>
                         <h1>ABDULSALAM</h1>
                         <h1>ODETAYO</h1>
                         <div className="typewriter" onAnimationIteration={this.textAnim}><p>A FRONT END DEVELOPER</p></div>
+                        
                     </div>
                 </div>
                 <div className="contain-body">
                     {this.state.current === "projects" ? <Projects /> : <Contact />}
                 </div>
                 <div className="footer">
-                    <a rel="noopener noreferrer" href="https://www.instagram.com/heyeso_92/" target="_blank">INSTAGRAM</a>|
+                    <a rel="noopener noreferrer" href="https://www.linkedin.com/in/abdulsalam-odetayo-87ba72202/" target="_blank">LINKEDIN</a> | 
+                    <a rel="noopener noreferrer" href="https://www.instagram.com/heyeso_92/" target="_blank">INSTAGRAM</a> | 
                     <a rel="noopener noreferrer" href="https://github.com/Heyeso?tab=repositories" target="_blank">GITHUB</a>
                 </div>
 

@@ -234,12 +234,15 @@ body {
     width: 0;
   }
 }
+.head .intro div.link {
+  grid-row: 5;
+  animation: slideIn 1s;
+}
 .head .intro button {
   position: relative;
   cursor: pointer;
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
-  grid-row: 5;
+  font-family: "Open Sans", sans-serif;  
   color: rgb(0, 162, 211);
   font-weight: 700;
   background-color: transparent;
@@ -253,19 +256,21 @@ body {
   transition: background-color 0.3s, color 0.3s;
   z-index: 10;
 }
-
+.head .intro div.link a {
+  padding: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(0, 162, 211);
+  transition: color 0.3s;
+}
+.head .intro div.link button:hover a {
+  color: white;
+  transition: all 0.3s;
+}
 .head .intro button:hover {
   color: white;
   background-color: rgb(0, 162, 211);
   transition: all 0.3s;
-}
-.head .intro button:hover ~ p:nth-child(2):before {
-  left: -60%;
-  transition: all 0.5s ease-out;
-}
-.head .intro button:hover ~ p:nth-child(5):before {
-  left: -70%;
-  transition: all 0.5s ease-out;
 }
 .head .intro button:active,
 .head .intro button:focus {
@@ -432,7 +437,7 @@ body {
   animation: navAnim 0.5s;
 }
 .pg-menu .pg-1 {
-  color: rgb(1, 225, 255);
+  color: rgb(0, 162, 211);
   justify-self: end;
 }
 .pg-menu .pg-2 {
@@ -593,7 +598,7 @@ body {
 }
 .contain .obj p > a {
   text-decoration: none;
-  color: rgb(0, 225, 255);
+  color: rgb(0, 162, 211);
 }
 .contain .obj p > a:hover {
   text-decoration: underline;
@@ -697,8 +702,8 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 .footer a:hover {
-  transform: scale(1.1);
-  color: rgb(1, 225, 255);
+  transform: scale(1.05);
+  color: rgb(0, 162, 211);
   transition: all 0.3s;
 }
 
@@ -736,7 +741,6 @@ body {
   }
   .head .intro p {
     padding: 10px;
-    border-left: 1px solid rgb(0, 162, 211);
     margin: 0;
   }
   .head .intro button {
@@ -744,7 +748,7 @@ body {
     font-size: 11.2px;
     margin: 20px 0;
     width: 90px;
-    margin-right: auto;
+    margin-right: 5px;
     height: 32px;
   }
 
@@ -804,6 +808,13 @@ body {
     width: 55px;
     padding-left: 2%;
   }
+
+  /* footer */
+  .footer a {
+    font-size: 10px;
+    margin: 0px 5px;
+    letter-spacing: 1px;
+  }
 }
 
 .click {
@@ -846,8 +857,8 @@ body {
 }
 
 .transition {
-  background-color: rgb(255, 255, 255);
-  animation: expand-1 2s ease-out;
+  background-color: rgb(0, 162, 211);
+  animation: expand-1 2s;
   transform: scaleY(0.005);
 }
 @keyframes expand-1 {

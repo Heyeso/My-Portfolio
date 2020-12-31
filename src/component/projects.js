@@ -45,7 +45,7 @@ const Projects = () => {
                     </div>
                     <div className="info">
                         <div>{val.info}</div>
-                        {val.code === "" ? <div className="priv">Private <i class="fas fa-lock"></i></div> : <a rel="noopener noreferrer" href={val.code} target="_blank">Code</a>}
+                        {val.code === "" ? <div className="priv">Private <i className="fas fa-lock"></i></div> : <a rel="noopener noreferrer" href={val.code} target="_blank">Code</a>}
                     </div>
                 </div>
                 ))}

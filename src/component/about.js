@@ -1,9 +1,28 @@
 import React from 'react'
+import $ from 'jquery'
+
+function anim () {
+    $(".tem").fadeIn(0)
+        // add anim class
+        $(".tem").addClass("transition")
+  
+        // fade out anim
+        setTimeout(() => {
+          $(".transition").fadeOut(500)
+        }, 1500);
+  
+        //switch page
+        // remove anim class
+        setTimeout(() => {
+          $(".tem").removeClass("transition")
+        }, 2500);
+}
+
 const About = (props) => {
     
     return (
         <React.Fragment>
-            <img onClick={() => props.view("intro")} src="images/myMinIcons/homeIcon.png" alt="back" className="closeIcon" />
+            <img onClick={() => {anim(); return setTimeout(() => { return props.view("intro")}, 1000)}} src="images/myMinIcons/homeIcon.png" alt="back" className="closeIcon" />
             <div className="about">
                 <div className="intro">
                     <h1>About Me</h1>
