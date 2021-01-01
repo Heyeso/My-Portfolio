@@ -63,6 +63,7 @@ class App extends Component {
       "height" : "100%",
       zIndex : "10000",
     }
+    $("html, body, #root").css({"overflow-y": "auto"})
     return(
       <React.Fragment>
         <div className="tem" style={animStyle}></div>

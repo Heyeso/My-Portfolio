@@ -21,41 +21,11 @@ $(document).ready(function () {
 
     // text animation
 
+    // about page scroll anim
 
 
 
-    //  animation on scroll
-    $(window).scroll( function(){
-        if(($(".pg-menu").offset().top + 100) > $(window).height()) {
-            $(".pg-menu").css({
-                "background-color": "black",
-                transition: "all 0.3s ease-in"
-            })
-            $(".contain-body .back").fadeIn(500)
-        }
-        else {
-            $(".pg-menu").css({
-                "background-color": "rgba(0,0,0,0)",
-                transition: "all 0.3s ease-in"
-            })
-            $(".contain-body .back").fadeOut(500)
-        }
 
-        $('.opt').each( function(i){
-            var bottom_of_object = $(this).offset().top + ($(this).outerHeight()/2);
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-            $(".opt").slideDown();
-            if( bottom_of_window > (bottom_of_object)){
-                $(this).addClass("come-in");
-                $(this).css({
-                    'opacity':'1',
-                    transition: "all 0.3s ease-out"
-                }, { queue: false });
-            }
-            
-        }); 
-    
-    });
     
 });

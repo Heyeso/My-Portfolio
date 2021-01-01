@@ -45,6 +45,39 @@ class Main extends Component {
             if(this.props.current === "contacts")
                 this.changeView("contacts")
         }
+
+        $(window).scroll( function(){
+            if(($(".pg-menu").offset().top + 100) > $(window).height()) {
+                $(".pg-menu").css({
+                    "background-color": "black",
+                    transition: "all 0.3s ease-in"
+                })
+                $(".contain-body .back").fadeIn(0)
+            }
+            else {
+                $(".pg-menu").css({
+                    "background-color": "rgba(0,0,0,0)",
+                    transition: "all 0.3s ease-in"
+                })
+                $(".contain-body .back").fadeOut(0)
+            }
+    
+            $('.opt').each( function(i){
+                var bottom_of_object = $(this).offset().top + ($(this).outerHeight()/2);
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+    
+                $(".opt").slideDown();
+                if( bottom_of_window > (bottom_of_object)){
+                    $(this).addClass("come-in");
+                    $(this).css({
+                        'opacity':'1',
+                        transition: "all 0.3s ease-out"
+                    }, { queue: false });
+                }
+                
+            }); 
+        
+        });
     }
     
     componentDidUpdate() {
@@ -57,17 +90,21 @@ class Main extends Component {
             $(".pg-1").css({color: "white"})
         }
     }
+
+    componentWillUnmount() {
+        $(window).unbind()
+    }
     
     render() {
 
         return (
             <React.Fragment>
                 <div className="head-bg"></div>
-                <div className="pg-menu">
+                <nav className="pg-menu">
                     <div onClick={() => this.changeView("projects")} className="pg pg-1">PROJECTS</div>
                     <div onClick={() => this.changeView("contacts")} className="pg pg-2">CONTACT</div>
-                </div>
-                <div className="head">
+                </nav>
+                <header className="head">
                     <img onClick={() => this.props.view("home")} className="logo" src="images/projectLogo.png" alt="logo" />
                     <div className="intro">
                         <div className="link">
@@ -80,16 +117,16 @@ class Main extends Component {
                         <div className="typewriter" onAnimationIteration={this.textAnim}><p>A FRONT END DEVELOPER</p></div>
                         
                     </div>
-                </div>
-                <div className="contain-body">
+                </header>
+                <main className="contain-body">
                     {this.state.current === "projects" ? <Projects /> : <Contact />}
                     <a className="back" href="#top"><i className="fas fa-arrow-up"></i></a>
-                </div>
-                <div className="footer">
+                </main>
+                <footer className="footer">
                     <a rel="noopener noreferrer" href="https://www.linkedin.com/in/abdulsalam-odetayo-87ba72202/" target="_blank">LINKEDIN</a> | 
                     <a rel="noopener noreferrer" href="https://www.instagram.com/heyeso_92/" target="_blank">INSTAGRAM</a> | 
                     <a rel="noopener noreferrer" href="https://github.com/Heyeso?tab=repositories" target="_blank">GITHUB</a>
-                </div>
+                </footer>
             </React.Fragment>
         )
     }

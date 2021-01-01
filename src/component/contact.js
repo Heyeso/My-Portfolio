@@ -41,7 +41,7 @@ class Contact extends Component {
 
         <div id="contact" className="contain">
           <img src="images/undraw_Hire_re_gn5j.svg" alt="hire" />
-          <div className="obj">
+          <section className="obj">
             <h1>Let's Work Together</h1>
             <p>
               Dedicated Front-end developer with experience in design and knowledgeable in web development.
@@ -51,7 +51,7 @@ class Contact extends Component {
             <p>
               <a href="Resume.pdf" target="_blank">Click Here</a> for my Resumé
             </p>
-          </div>
+          </section>
           <form action="mailto:adeodetayo92@gmail.com" method="post" encType="text/plain">
             <div className="name">
               <p>Name *</p>
