@@ -1,3 +1,5 @@
+import {useEffect} from 'react'
+import $ from 'jquery'
 
 const Projects = () => {
 
@@ -32,6 +34,38 @@ const Projects = () => {
             code : "https://github.com/Heyeso/Simple-Quiz"
         }
     ]
+
+    useEffect(()=>{
+        if(($(".pg-menu").offset().top + 100) > $(window).height()) {
+            $(".pg-menu").css({
+                "background-color": "black",
+                transition: "all 0.3s ease-in"
+            })
+            $(".contain-body .back").fadeIn(0)
+        }
+        else {
+            $(".pg-menu").css({
+                "background-color": "rgba(0,0,0,0)",
+                transition: "all 0.3s ease-in"
+            })
+            $(".contain-body .back").fadeOut(0)
+        }
+
+        $('.opt').each( function(i){
+            var bottom_of_object = $(this).offset().top + ($(this).outerHeight()/2);
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            $(".opt").slideDown();
+            if( bottom_of_window > (bottom_of_object)){
+                $(this).addClass("come-in");
+                $(this).css({
+                    'opacity':'1',
+                    transition: "all 0.3s ease-out"
+                }, { queue: false });
+            }
+            
+        }); 
+    },[])
 
     return (
         <div id="projects" className="contain">
