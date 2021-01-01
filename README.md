@@ -27,3 +27,7 @@ Desktop
 (Default) Google Chrome\
 Microsoft Edge\
 Opera
+
+### `API`
+
+Email.js

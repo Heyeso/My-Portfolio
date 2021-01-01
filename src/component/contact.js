@@ -1,5 +1,6 @@
-// import $ from 'jquery'
+
 import React, {Component} from 'react'
+import * as emailjs from 'emailjs-com'
 
 class Contact extends Component {
 
@@ -12,6 +13,28 @@ class Contact extends Component {
           message: ""
         }
       }
+
+      handleSubmit = (e) => {
+        e.preventDefault()
+
+        emailjs.send('service_3xv1u4n', 'template_07v4q8q', this.state, "user_J6cW0Q4jqtt4jFGLjCuxx")
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+          console.log('FAILED...', error);
+        });
+
+         this.resetForm()
+     }
+
+     resetForm() {
+      this.setState({
+          fname: "",
+          lname: "",
+          email: "",
+          message: ""
+      })
+    }
     
     textHandler = (event) => {
         if(event.target.name === "fname")
@@ -52,7 +75,7 @@ class Contact extends Component {
               <a href="Resume.pdf" target="_blank">Click Here</a> for my Resumé
             </p>
           </section>
-          <form action="mailto:adeodetayo92@gmail.com" method="post" encType="text/plain">
+          <form id='#myForm' onSubmit={this.handleSubmit}>
             <div className="name">
               <p>Name *</p>
               <div className="min-grid">

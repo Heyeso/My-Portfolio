@@ -125,7 +125,8 @@ class Main extends Component {
                 <footer className="footer">
                     <a rel="noopener noreferrer" href="https://www.linkedin.com/in/abdulsalam-odetayo-87ba72202/" target="_blank">LINKEDIN</a> | 
                     <a rel="noopener noreferrer" href="https://www.instagram.com/heyeso_92/" target="_blank">INSTAGRAM</a> | 
-                    <a rel="noopener noreferrer" href="https://github.com/Heyeso?tab=repositories" target="_blank">GITHUB</a>
+                    <a rel="noopener noreferrer" href="https://github.com/Heyeso?tab=repositories" target="_blank">GITHUB</a> | 
+                    <a rel="noopener noreferrer" href="mailto:adeodetayo92@gmail.com" target="_blank">EMAIL</a>
                 </footer>
             </React.Fragment>
         )

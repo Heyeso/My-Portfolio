@@ -15,7 +15,7 @@ class Home extends Component {
                 </div>
                 <div className="cur-sel"></div>
             </section>
-            <div className="author">© 2011 Abdulsalam Odetayo All Rights Reserved</div>
+            <div className="author">© 2020 Abdulsalam Odetayo All Rights Reserved</div>
             </React.Fragment>
         )
     }
