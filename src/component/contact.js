@@ -63,7 +63,7 @@ class Contact extends Component {
         return (
 
         <div id="contact" className="contain">
-          <img src="images/undraw_Hire_re_gn5j.svg" alt="hire" />
+          <img src="images/undraw_hiring_cyhs.svg" alt="hire" />
           <section className="obj">
             <h1>Let's Work Together</h1>
             <p>

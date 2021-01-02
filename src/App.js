@@ -23,20 +23,20 @@ class App extends Component {
 
       // fade out anim
       setTimeout(() => {
-        $(".transition").fadeOut(500)
-      }, 1500);
+        $(".transition").fadeOut(250)
+      }, 750);
 
       //switch page
       setTimeout(() => {
         this.setState({
           current : input
        })
-      }, 1500);
+      }, 750);
 
       // remove anim class
       setTimeout(() => {
         $(".tem").removeClass("transition")
-      }, 2500);
+      }, 1250);
     }
     else {
       $(".grid-box").fadeOut(500)
@@ -81,7 +81,6 @@ class App extends Component {
       "height" : "100%",
       zIndex : "10000",
     }
-    $("html, body, #root").css({"overflow-y": "auto"})
     return(
       <React.Fragment>
         <div className="tem" style={animStyle}></div>
