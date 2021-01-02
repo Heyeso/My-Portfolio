@@ -105,7 +105,7 @@ class Main extends Component {
                     <div onClick={() => this.changeView("contacts")} className="pg pg-2">CONTACT</div>
                 </nav>
                 <header className="head">
-                    <img onClick={() => this.props.view("home")} className="logo" src="images/projectLogo.png" alt="logo" />
+                    <img onClick={() => this.props.view("home")} className="logo" src="images/iconLogo.png" alt="logo" />
                     <div className="intro">
                         <div className="link">
                             <button onClick={() => this.props.view("about")}>ABOUT ME</button>

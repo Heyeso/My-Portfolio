@@ -844,14 +844,14 @@ nav.side a {
 /* Mobile */
 @media screen and (max-width: 768px) {
   .select .grid-box {
-    width: 65%;
+    width: 30vh;
     grid-template-columns: 1fr;
   }
   .select .grid-box div {
-    padding-top: 65.3%;
+    padding-top: 80.3%;
   }
   .author {
-    font-size: 0.5rem;
+    font-size: 12px;
   }
 
   /* Navbar and Intro Page */
