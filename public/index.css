@@ -92,6 +92,7 @@ body {
   transition: background-color 0.3s;
 }
 .author {
+  text-align: center;
   font-family: "Open Sans", sans-serif;
   bottom: 0;
   left: 50%;

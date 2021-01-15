@@ -21,8 +21,8 @@ class Main extends Component {
       }
 
     textAnim = (e) => {
-        let text = ["A WEB DEVELOPER", "A PROGRAMMER", "A SOFTWARE DEVELOPER", "A FRONT END DEVELOPER"]
-        if(this.state.c === 3)
+        let text = ["A WEB DEVELOPER", "A PROGRAMMER", "A SOFTWARE DEVELOPER", "A FRONT END DEVELOPER", "A GRAPHICS DESIGNER"]
+        if(this.state.c === 4)
             this.setState({
                 c : 0
             })
