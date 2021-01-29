@@ -258,6 +258,11 @@ body {
   z-index: 10;
 }
 .head .intro div.link a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   text-transform: uppercase;
   text-decoration: none;

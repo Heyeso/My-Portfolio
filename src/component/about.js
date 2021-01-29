@@ -44,7 +44,7 @@ const About = (props) => {
                     <article>
                         <h1>SCHOOL</h1>
                         <p>
-                        At the age of 15, I graduated from High School with a High School Diploma Equivalent. For a year, I worked as an intern and then as a full-time worker at Abu cyber-cafe as a Graphics Designer. It was during this work period I acquired skills in Graphics Design. In 2018, I enrolled in a 2-year college to earn an Associate's Degree in Computer Science and transfer to a 4-year college to earn a Bachelor's Degree in Computer Science. I acquired my Associate's Degree in Computer Science on 31 May 2020 and a Maryland General Education Diploma certificate on 11 November 2020. I am currently attending the University of Baltimore, Baltimore County, to complete my undergraduate education.
+                        At the age of 15, I graduated from High School with a High School Diploma Equivalent. For a year, I worked as an intern and then as a full-time worker at Abu cyber-cafe as a Graphics Designer Intern. It was during this work period I acquired skills in Graphics Design. In 2018, I enrolled in a 2-year college to earn an Associate's Degree in Computer Science and transfer to a 4-year college to earn a Bachelor's Degree in Computer Science. I acquired my Associate's Degree in Computer Science on 31 May 2020 and a Maryland General Education Diploma certificate on 11 November 2020. I am currently attending the University of Baltimore, Baltimore County, to complete my undergraduate education.
                         </p>
                     </article>
                 </section>
